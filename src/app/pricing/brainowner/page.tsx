@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -20,7 +20,7 @@ import { Switch } from "@/components/ui/switch";
 const MONTHLY_BASE = 1_500_000;
 const DISCOUNT_RATE = 0.2;
 
-export default function BrandOwnerPricingPage() {
+function BrandOwnerPricingContent() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -230,5 +230,13 @@ export default function BrandOwnerPricingPage() {
         </div>
       </main>
     </div>
+  );
+}
+
+export default function BrandOwnerPricingPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BrandOwnerPricingContent />
+    </Suspense>
   );
 }

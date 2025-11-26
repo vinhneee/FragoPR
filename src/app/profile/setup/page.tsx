@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import ProfileForm from "@/components/ProfileForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function ProfileSetupPage() {
+function ProfileSetupContent() {
   const [userType, setUserType] = useState<"brand" | "investor" | null>(null);
   const [step, setStep] = useState<"select" | "form" | "complete">("select");
   const router = useRouter();
@@ -241,4 +241,12 @@ export default function ProfileSetupPage() {
   }
 
   return null;
+}
+
+export default function ProfileSetupPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProfileSetupContent />
+    </Suspense>
+  );
 }
