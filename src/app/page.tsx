@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -11,10 +12,11 @@ export default function HomePage() {
       <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">FG</span>
-            </div>
-            <h1 className="text-xl font-bold text-gray-900">Frago</h1>
+             <img 
+              src="/logo.svg" 
+              alt="Frago Logo" 
+               className="h-16 w-auto"
+            />
           </div>
           <nav className="hidden md:flex items-center space-x-6">
             <Link href="#features" className="text-gray-600 hover:text-blue-600 transition-colors">
@@ -211,15 +213,18 @@ export default function HomePage() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">FG</span>
-                </div>
-                <h3 className="text-lg font-bold">Frago</h3>
-              </div>
+                  <img 
+                    src="/logo.svg" 
+                    alt="Frago Logo" 
+                    className="h-16 w-auto"
+                />
+            </div> 
+         </div>
               <p className="text-gray-400">
                 The leading B2B platform for franchise-investor connections
               </p>
             </div>
-
+            
             <div>
               <h4 className="font-semibold mb-4">Platform</h4>
               <ul className="space-y-2 text-gray-400">

@@ -59,7 +59,7 @@ export default function BrandOwnerPricingPage() {
               FS
             </div>
             <div>
-              <p className="text-sm font-semibold text-slate-500">FranchiseSwipe</p>
+              <p className="text-sm font-semibold text-slate-500">Frago</p>
               <p className="text-base font-bold text-slate-900">Brand Owner Suite</p>
             </div>
           </Link>

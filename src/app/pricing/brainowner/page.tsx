@@ -1,5 +1,9 @@
+"use client";
+
 import BrandOwnerPricingPage from "@/components/BrandOwnerPricingPage";
 
-export default function Page() {
+export const dynamic = "force-dynamic";
+
+export default function BrandOwnerPricingRoute() {
   return <BrandOwnerPricingPage />;
 }
