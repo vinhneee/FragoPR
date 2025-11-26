@@ -25,7 +25,7 @@ export default function ProfileSetupPage() {
   const handleUserTypeSelection = (type: "brand" | "investor") => {
     if (type === "brand") {
       router.push(
-        `/pricing/brand-owner?returnTo=${encodeURIComponent(
+        `/pricing/brainowner?returnTo=${encodeURIComponent(
           "/profile/setup?userType=brand",
         )}`,
       );
