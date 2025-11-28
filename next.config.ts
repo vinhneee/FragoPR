@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
         hostname: 'replicate.delivery', 
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+        pathname: '/**',
+      },
     ],
   },
 }

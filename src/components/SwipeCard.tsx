@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import Image from "next/image";
 
 interface SwipeCardProps {
   type: "brand" | "investor";
@@ -50,10 +51,19 @@ export default function SwipeCard({ type, profile, onSwipe }: SwipeCardProps) {
     }).format(amount);
   };
 
+  // Generate fallback image URL based on type
+  const getFallbackImage = () => {
+    if (type === "brand") {
+      return "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop";
+    } else {
+      return "https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&h=600&fit=crop";
+    }
+  };
+
   return (
     <div className="relative w-full max-w-sm mx-auto">
       <Card 
-        className={`h-96 shadow-lg border-0 transform transition-all duration-300 ${
+        className={`overflow-hidden shadow-lg border-0 p-0 gap-0 transform transition-all duration-300 ${
           isAnimating
             ? swipeDirection === "left" 
               ? "-translate-x-full rotate-12 opacity-0"
@@ -62,20 +72,22 @@ export default function SwipeCard({ type, profile, onSwipe }: SwipeCardProps) {
         }`}
       >
         {/* Profile Image */}
-        <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 rounded-t-lg overflow-hidden">
-          <img 
-            src={profile.image || `https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3f23f2f7-55da-4ea7-9f6e-a07181116ba3.png === "brand" ? "Professional+franchise+brand+office+modern+corporate" : "Business+investor+professional+executive+office"}`}
+        <div className="relative h-48 bg-gradient-to-br from-blue-100 to-purple-100 overflow-hidden">
+          <Image 
+            src={profile.image || getFallbackImage()}
             alt={`${profile.company} - ${type === "brand" ? "Franchise brand headquarters" : "Business investor profile"}`}
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            unoptimized
           />
-          <div className="absolute top-4 left-4">
+          <div className="absolute top-4 left-4 z-10">
             <Badge variant={type === "brand" ? "default" : "secondary"} className="bg-white/90 text-gray-900">
               {type === "brand" ? "Franchise Brand" : "Investor"}
             </Badge>
           </div>
         </div>
 
-        <CardContent className="p-6 space-y-4">
+        <CardContent className="p-6 space-y-4 px-6">
           {/* Header */}
           <div>
             <h3 className="text-xl font-bold text-gray-900">{profile.name}</h3>
