@@ -4,44 +4,43 @@ import { useState, useEffect } from "react";
 import SwipeCard from "./SwipeCard";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-
-// Mock data for demonstration
 const mockBrands = [
   {
     id: "1",
-    name: "Sarah Johnson",
-    company: "QuickBite Burgers",
-    location: "San Francisco, CA",
-    industry: "Fast Food",
-    description: "Proven fast-casual burger concept with 15+ years of success. Looking for expansion partners in key metropolitan areas.",
-    franchiseFee: 45000,
-    minInvestment: 250000,
-    storeCount: 127,
-    tags: ["Fast Casual", "Proven Model", "High ROI", "Training Included"]
+    name: "Emma Nguyen",
+    company: "Hồng trà ngô gia",
+    location: "Ho Chi Minh City, Vietnam",
+    industry: "Tea & Milk",
+    description: "Một thương hiệu trà sữa Việt Nam đang phát triển nhanh, nổi tiếng với mức giá phải chăng, hương vị trà rang đặc trưng và lượng khách hàng trung thành lớn. Hiện đang tìm kiếm đối tác nhượng quyền để mở rộng trên toàn quốc.",
+    franchiseFee: 4000,
+    minInvestment: 7000,
+    storeCount: 80,
+    tags: ["Milk Tea", "Affordable", "Popular", "Fast Expansion"]
   },
   {
     id: "2", 
-    name: "Michael Chen",
-    company: "TechFix Solutions",
-    location: "Austin, TX",
-    industry: "Technology Services",
-    description: "Mobile device repair franchise with proprietary training system. Growing market with recession-resistant revenue streams.",
-    franchiseFee: 35000,
-    minInvestment: 180000,
+    image: "thanh.png",
+    name: "Le Minh Anh",
+    company: "Mixue",
+    location: "Hanoi, Vietnam",
+    industry: "Ice Cream & Beverages",
+    description: "Một thương hiệu trà và kem toàn cầu phát triển nhanh, nổi tiếng với mức giá rẻ và sức hút mạnh đối với thị trường đại chúng. Hiện đang mở rộng mạnh mẽ tại Việt Nam với mô hình vận hành ổn định và nhu cầu nhượng quyền cao.",
+    franchiseFee: 2000,
+    minInvestment: 18000,
     storeCount: 89,
-    tags: ["Tech Services", "Growing Market", "Low Overhead", "Flexible Model"]
+    tags: ["Ice Cream", "Milk Tea", "Low Cost", "High Demand"]
   },
   {
     id: "3",
-    name: "Lisa Rodriguez",
-    company: "FitZone Studios",
-    location: "Miami, FL", 
-    industry: "Fitness & Wellness",
-    description: "Boutique fitness studio concept focusing on small group training. Turnkey operation with comprehensive support system.",
-    franchiseFee: 55000,
-    minInvestment: 320000,
+    name: "Trần Gia Bảo",
+    company: "Cộng Cà Phê",
+    location: "Hanoi, Vietnam", 
+    industry: "Coffee & Beverages",
+    description: "Một chuỗi cà phê Việt Nam có phong cách độc đáo, lấy cảm hứng từ thẩm mỹ thời chiến mang màu sắc hoài cổ. Thương hiệu nổi tiếng với món cà phê cốt dừa đặc trưng và bản sắc văn hóa mạnh mẽ. Hiện đang tìm kiếm các đối tác chiến lược để mở rộng tại Việt Nam và quốc tế.",
+    franchiseFee: 11000,
+    minInvestment: 110000,
     storeCount: 64,
-    tags: ["Fitness", "Boutique", "High Margins", "Community Focus"]
+    tags: ["Vietnamese Coffee", "Unique Concept", "Cultural Brand", "Strong Identity"]
   }
 ];
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { Suspense, useMemo, useState } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -17,10 +17,10 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { Switch } from "@/components/ui/switch";
 
-const MONTHLY_BASE = 1_500_000;
+const MONTHLY_BASE = 5_000_000;
 const DISCOUNT_RATE = 0.2;
 
-export default function BrandOwnerPricingPage() {
+function BrandOwnerPricingContent() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
   const searchParams = useSearchParams();
   const router = useRouter();
@@ -55,12 +55,10 @@ export default function BrandOwnerPricingPage() {
       <header className="border-b bg-white/80 backdrop-blur">
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
           <Link href="/" className="flex items-center space-x-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-lg font-bold text-white">
-              FS
+            <div className="flex items-center space-x-2">
+              <img src="/logo.svg" alt="Frago Logo" className="h-16 w-auto" />
             </div>
             <div>
-              <p className="text-sm font-semibold text-slate-500">Frago</p>
-              <p className="text-base font-bold text-slate-900">Brand Owner Suite</p>
             </div>
           </Link>
 
@@ -232,3 +230,9 @@ export default function BrandOwnerPricingPage() {
     </div>
   );
 }
+
+export default function BrandOwnerPricingPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <BrandOwnerPricingContent />
+    </Suspense>)}

@@ -122,12 +122,13 @@ export default function AdminDashboard() {
       <header className="bg-white border-b shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-4">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FS</span>
+              <div className="container mx-auto px-4 py-4 flex items-center justify-between">
+                <img 
+              src="/logo.svg" 
+              alt="Frago Logo" 
+               className="h-16 w-auto"
+            />
               </div>
-              <h1 className="text-xl font-bold text-gray-900">FranchiseSwipe Admin</h1>
-            </Link>
             <Badge className="bg-red-100 text-red-800">Admin Access</Badge>
           </div>
           

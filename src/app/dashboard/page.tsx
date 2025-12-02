@@ -18,7 +18,7 @@ export default function DashboardPage() {
 
   // Mock user data
   const userData = {
-    name: "John Doe",
+    name: "DAO VINH",
     company: userType === "brand" ? "Burger Palace" : "Investment Partners LLC",
     profileComplete: 85,
     totalMatches: 12,
@@ -29,8 +29,8 @@ export default function DashboardPage() {
   const mockMatches = [
     {
       id: "1",
-      name: "Sarah Johnson",
-      company: "QuickBite Burgers",
+      name: "Emma Nguyen",
+      company: "Starbucks Coffee",
       matchDate: "2024-01-15",
       status: "active",
       lastMessage: "Interested in discussing franchise terms..."
@@ -60,10 +60,9 @@ export default function DashboardPage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FS</span>
+              <div className="flex items-center space-x-2">
+                 <img src="/logo.svg" alt="Frago Logo" className="h-16 w-auto" />
               </div>
-              <h1 className="text-xl font-bold text-gray-900">Frago</h1>
             </Link>
             <Separator orientation="vertical" className="h-6" />
             <div>

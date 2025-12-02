@@ -19,9 +19,7 @@ export default function PricingPage() {
       monthlyPrice: 0,
       annualPrice: 0,
       features: [
-        "5 swipes mỗi ngày",
         "Xem profile cơ bản",
-        "3 matches tối đa",
         "Chat cơ bản",
         "Hỗ trợ email"
       ],
@@ -41,9 +39,7 @@ export default function PricingPage() {
       monthlyPrice: 99,
       annualPrice: 990,
       features: [
-        "Unlimited swipes", 
         "Xem profile đầy đủ",
-        "Unlimited matches",
         "Advanced chat features",
         "AI-powered recommendations",
         "Advanced filtering",
@@ -110,20 +106,17 @@ export default function PricingPage() {
 
   const handleSelectPlan = (planId: string) => {
     setSelectedPlan(planId);
-    // In production: redirect to payment processing
     alert(`Đã chọn gói ${plans.find(p => p.id === planId)?.name}. Chuyển đến thanh toán...`);
   };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
-      {/* Header */}
       <header className="bg-white border-b shadow-sm">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">FS</span>
+            <div className="flex items-center space-x-2">
+              <img src="/logo.svg" alt="Frago Logo" className="h-16 w-auto" />
             </div>
-            <h1 className="text-xl font-bold text-gray-900">FranchiseSwipe</h1>
           </Link>
           
           <div className="flex items-center space-x-4">
@@ -138,7 +131,6 @@ export default function PricingPage() {
       </header>
 
       <div className="container mx-auto px-4 py-12">
-        {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Chọn Gói Phù Hợp
@@ -146,8 +138,6 @@ export default function PricingPage() {
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
             Từ startup đến tập đoàn, chúng tôi có giải pháp phù hợp với mọi quy mô kinh doanh
           </p>
-
-          {/* Billing Toggle */}
           <div className="flex items-center justify-center space-x-4 mb-8">
             <span className={`text-sm ${!isAnnual ? 'text-gray-900 font-medium' : 'text-gray-500'}`}>
               Thanh toán hàng tháng
@@ -162,8 +152,6 @@ export default function PricingPage() {
             <Badge className="bg-green-100 text-green-800">Tiết kiệm 17%</Badge>
           </div>
         </div>
-
-        {/* Pricing Plans */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {plans.map((plan) => (
             <Card 
@@ -199,7 +187,6 @@ export default function PricingPage() {
               </CardHeader>
 
               <CardContent className="space-y-4">
-                {/* Features */}
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-3">Tính năng bao gồm:</h4>
                   <ul className="space-y-2">
@@ -211,8 +198,6 @@ export default function PricingPage() {
                     ))}
                   </ul>
                 </div>
-
-                {/* Limitations */}
                 {plan.limitations.length > 0 && (
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">Giới hạn:</h4>
@@ -243,8 +228,6 @@ export default function PricingPage() {
             </Card>
           ))}
         </div>
-
-        {/* Add-on Services */}
         <div className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Dịch Vụ Bổ Sung</h2>
@@ -266,8 +249,6 @@ export default function PricingPage() {
             ))}
           </div>
         </div>
-
-        {/* FAQ Section */}
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Câu Hỏi Thường Gặp</h2>
           
@@ -301,8 +282,6 @@ export default function PricingPage() {
             </Card>
           </div>
         </div>
-
-        {/* CTA Section */}
         <div className="text-center mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
           <h2 className="text-2xl font-bold mb-4">Sẵn sàng bắt đầu?</h2>
           <p className="text-lg opacity-90 mb-6">

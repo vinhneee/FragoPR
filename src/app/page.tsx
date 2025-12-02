@@ -25,7 +25,7 @@ export default function HomePage() {
             <Link href="/pricing" className="text-gray-600 hover:text-blue-600 transition-colors">
               Pricing
             </Link>
-            <Link href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">
+            <Link href="/about" className="text-gray-600 hover:text-blue-600 transition-colors">
               About
             </Link>
           </nav>
@@ -54,8 +54,7 @@ export default function HomePage() {
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"> Investors</span>
               </h1>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-                The first B2B platform that uses swipe mechanics to connect franchise brands 
-                with potential investors. Find your perfect business match today.
+                Nền tảng B2B đầu tiên sử dụng cơ chế Swipe Mechanics để kết nối các thương hiệu nhượng quyền với nhà đầu tư tiềm năng.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
                 <Link href="/auth/register">
@@ -69,28 +68,24 @@ export default function HomePage() {
                   </Button>
                 </Link>
               </div>
-
-              {/* Hero Image Placeholder */}
               <div className="relative max-w-4xl mx-auto">
                 <img 
-                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/59ed1d92-2fe4-4b29-aa92-be56c6047079.png"
+                  src="Map.png"
                   alt="FranchiseSwipe platform dashboard showing swipe interface for B2B franchise matching"
-                  className="w-full h-auto rounded-xl shadow-2xl border"
+                  className="h-300 w-250"
                 />
               </div>
             </div>
           </div>
         </section>
-
-        {/* Features Section */}
         <section id="features" className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Why Choose Frago?
+                Tại sao chọn Frago?
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Our platform revolutionizes franchise-investor connections with intelligent matching and seamless communication.
+                Nền tảng của chúng tôi cách mạng hóa việc kết nối giữa thương hiệu nhượng quyền và nhà đầu tư bằng hệ thống ghép nối thông minh và giao tiếp liền mạch.
               </p>
             </div>
 
@@ -104,7 +99,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-600">
-                    AI-powered algorithm matches franchises with investors based on budget, location, industry, and business goals.
+                    Thuật toán ứng dụng trí tuệ nhân tạo (AI) sẽ kết nối thương hiệu nhượng quyền với nhà đầu tư dựa trên ngân sách, vị trí, ngành nghề và mục tiêu kinh doanh.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -118,7 +113,8 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-600">
-                    Instant messaging with matched partners. Share documents, schedule meetings, and negotiate deals directly in-platform.
+                    Nhắn tin tức thời với các đối tác đã được ghép nối.
+Chia sẻ tài liệu, lên lịch họp và đàm phán thương vụ trực tiếp ngay trên nền tảng.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -132,7 +128,7 @@ export default function HomePage() {
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-gray-600">
-                    Track your matching success, analyze market trends, and optimize your franchise or investment strategy with detailed insights.
+                    Theo dõi hiệu quả kết nối, phân tích xu hướng thị trường, và tối ưu hóa chiến lược nhượng quyền hoặc đầu tư của bạn bằng những báo cáo dữ liệu chi tiết.
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -145,10 +141,10 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                How It Works
+             Làm việc như thế nào
               </h2>
               <p className="text-lg text-gray-600">
-                Simple steps to find your perfect franchise match
+                Các bước đơn giản để tìm thương hiệu nhượng quyền phù hợp nhất với bạn.
               </p>
             </div>
 
@@ -158,7 +154,7 @@ export default function HomePage() {
                   1
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Create Profile</h3>
-                <p className="text-gray-600">Set up your franchise brand or investor profile with detailed information</p>
+                <p className="text-gray-600">Tạo hồ sơ thương hiệu nhượng quyền hoặc nhà đầu tư của bạn với đầy đủ thông tin chi tiết.</p>
               </div>
 
               <div className="text-center">
@@ -166,7 +162,7 @@ export default function HomePage() {
                   2
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Browse & Swipe</h3>
-                <p className="text-gray-600">Swipe through potential matches based on your preferences and criteria</p>
+                <p className="text-gray-600">Vuốt để xem các đối tác tiềm năng dựa trên nhu cầu và tiêu chí bạn đã chọn.</p>
               </div>
 
               <div className="text-center">
@@ -174,7 +170,7 @@ export default function HomePage() {
                   3
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Match & Chat</h3>
-                <p className="text-gray-600">When both parties swipe right, start chatting and sharing business details</p>
+                <p className="text-gray-600">Khi cả hai bên đều vuốt phải, quá trình trò chuyện và chia sẻ thông tin kinh doanh có thể được bắt đầu ngay lập tức.</p>
               </div>
 
               <div className="text-center">
@@ -182,7 +178,7 @@ export default function HomePage() {
                   4
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Close Deal</h3>
-                <p className="text-gray-600">Negotiate terms and finalize your franchise partnership agreement</p>
+                <p className="text-gray-600">Đàm phán các điều khoản và hoàn tất thỏa thuận hợp tác nhượng quyền của bạn.</p>
               </div>
             </div>
           </div>
@@ -192,10 +188,10 @@ export default function HomePage() {
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Find Your Perfect Match?
+              Sẵn sàng để tìm đối tác phù hợp nhất của bạn chưa?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thousands of franchise brands and investors already using our platform
+              Tham gia cùng hàng ngàn thương hiệu nhượng quyền và nhà đầu tư đang sử dụng nền tảng của chúng tôi.
             </p>
             <Link href="/auth/register">
               <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 text-lg">
@@ -212,7 +208,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                <div className="flex items-center space-x-2">
                   <img 
                     src="/logo.svg" 
                     alt="Frago Logo" 
@@ -224,7 +220,7 @@ export default function HomePage() {
                 The leading B2B platform for franchise-investor connections
               </p>
             </div>
-            
+
             <div>
               <h4 className="font-semibold mb-4">Platform</h4>
               <ul className="space-y-2 text-gray-400">
@@ -256,7 +252,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 FranchiseSwipe. All rights reserved.</p>
+            <p>&copy; 2025 Frago. All rights reserved.</p>
           </div>
         </div>
       </footer>

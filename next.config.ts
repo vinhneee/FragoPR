@@ -1,30 +1,8 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // ⛔ Tắt ESLint khi build (fix lỗi bạn gặp trên Vercel)
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  /* config options here */
+  reactCompiler: true,
+};
 
-  images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.pexels.com',
-        pathname: '/photos/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'storage.googleapis.com',
-        pathname: '/workspace-*/image/**',
-      },
-      { 
-        protocol: 'https', 
-        hostname: 'replicate.delivery', 
-        pathname: '/**',
-      },
-    ],
-  },
-}
-
-export default nextConfig
+export default nextConfig;

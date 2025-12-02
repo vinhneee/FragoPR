@@ -103,10 +103,9 @@ export default function LoginPage() {
         {/* Header */}
         <div className="text-center">
           <Link href="/" className="inline-flex items-center space-x-2 mb-8">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold"> FG </span>
+            <div className="flex items-center space-x-2">
+              <img src="/logo.svg" alt="Frago Logo" className="h-16 w-auto" />
             </div>
-            <h1 className="text-2xl font-bold text-gray-900">Frago</h1>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900">Welcome back</h2>
           <p className="mt-2 text-gray-600">Sign in to your account to continue matching</p>

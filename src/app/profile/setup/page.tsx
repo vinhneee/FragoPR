@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import ProfileForm from "@/components/ProfileForm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 
-export default function ProfileSetupPage() {
+function ProfileSetupContent() {
   const [userType, setUserType] = useState<"brand" | "investor" | null>(null);
   const [step, setStep] = useState<"select" | "form" | "complete">("select");
   const router = useRouter();
@@ -25,7 +25,7 @@ export default function ProfileSetupPage() {
   const handleUserTypeSelection = (type: "brand" | "investor") => {
     if (type === "brand") {
       router.push(
-        `/pricing/brand-owner?returnTo=${encodeURIComponent(
+        `/pricing/brainowner?returnTo=${encodeURIComponent(
           "/profile/setup?userType=brand",
         )}`,
       );
@@ -100,10 +100,11 @@ export default function ProfileSetupPage() {
           {/* Header */}
           <div className="text-center">
             <Link href="/" className="inline-flex items-center space-x-2 mb-8">
-              <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold">FG</span>
+              <div className="flex items-center space-x-2">
+                <img src="/logo.svg" 
+            alt="Frago Logo" 
+            className="h-16 w-auto"/>
               </div>
-              <h1 className="text-2xl font-bold text-gray-900">Frago</h1>
             </Link>
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Choose Your Role</h2>
             <p className="text-gray-600">Select how you'll use Frago to get personalized matches</p>
@@ -242,3 +243,8 @@ export default function ProfileSetupPage() {
 
   return null;
 }
+export default function ProfileSetupPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProfileSetupContent />
+    </Suspense>);}

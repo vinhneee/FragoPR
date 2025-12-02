@@ -7,48 +7,48 @@ import Link from "next/link";
 export default function AboutPage() {
   const teamMembers = [
     {
-      name: "Đào Lê Quang Vinh",
+      name: "Nguyễn Hữu Công Thành",
       role: "CEO & Co-founder",
       bio: "15+ năm kinh nghiệm trong lĩnh vực franchise và đầu tư. Từng làm việc tại các tập đoàn F&B lớn.",
-      image: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3de505a5-5556-43d5-a5a3-0c3c21db30fc.png"
+      image: "/thanh.jpg"
     },
     {
-      name: "Nguyễn Hữu Công Thành",
+      name: "Đào Lê Quang Vinh",
       role: "CTO & Co-founder", 
       bio: "Chuyên gia công nghệ với background từ Google và Meta. Passion về AI và machine learning.",
-      image: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ff9c37f4-1811-47dc-8d83-5a662f63e259.png"
+      image: "vinh.jpg"
     },
     {
       name: "Phạm Trần Duy Thái",
       role: "Head of Business Development",
       bio: "Veteran trong ngành nhượng quyền Việt Nam. Network rộng với các brand và investor hàng đầu.",
-      image: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/590a64f1-a318-4b61-82ec-5d370af6c4aa.png"
+      image: "/thai.jpg"
     }
   ];
 
   const milestones = [
     {
-      year: "2023",
+      year: "2025",
       title: "Khởi nghiệp",
-      description: "Ý tưởng FranchiseSwipe ra đời từ khó khăn trong việc kết nối brand và investor"
+      description: "Ý tưởng Frago ra đời từ khó khăn trong việc kết nối brand và investor"
     },
     {
-      year: "2024 Q1",
+      year: "2026 Q1",
       title: "Product Development", 
       description: "Xây dựng MVP và test với 100+ brand và investor đầu tiên"
     },
     {
-      year: "2024 Q2",
+      year: "2026 Q2",
       title: "Seed Funding",
       description: "Gọi vốn thành công $2M từ các quỹ đầu tư hàng đầu Việt Nam"
     },
     {
-      year: "2024 Q4",
+      year: "2026 Q4",
       title: "Official Launch",
       description: "Ra mắt chính thức với 500+ brand và 1000+ investor tham gia"
     },
     {
-      year: "2025",
+      year: "2027",
       title: "Expansion",
       description: "Mở rộng sang thị trường Đông Nam Á và ra mắt AI matching 2.0"
     }
@@ -62,8 +62,7 @@ export default function AboutPage() {
           <Link href="/" className="flex items-center space-x-2">
             <img src="/logo.svg" 
             alt="Frago Logo" 
-            className="w-8 h-8 object-contain"/>
-            <h1 className="text-xl font-bold text-gray-900">Frago</h1>
+            className="h-16 w-auto"/>
           </Link>
           
           <div className="flex items-center space-x-4">
@@ -118,7 +117,7 @@ export default function AboutPage() {
             <CardContent>
               <p className="text-gray-600 leading-relaxed">
                 Trở thành nền tảng số 1 Đông Nam Á cho ecosystem nhượng quyền, 
-                nơi mọi giao dịch franchise đều bắt đầu từ FranchiseSwipe.
+                nơi mọi giao dịch franchise đều bắt đầu từ Frago.
               </p>
             </CardContent>
           </Card>
@@ -146,7 +145,7 @@ export default function AboutPage() {
 
             <div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                ✅ Giải Pháp FranchiseSwipe
+                ✅ Giải Pháp Frago
               </h3>
               <ul className="space-y-3 text-gray-600">
                 <li>• <strong>AI Matching:</strong> Thuật toán thông minh match dựa trên 50+ criteria</li>
@@ -305,7 +304,7 @@ export default function AboutPage() {
           </h2>
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Whether you're a franchise brand looking for expansion partners or an investor seeking opportunities, 
-            FranchiseSwipe is the place to be.
+            Frago is the place to be.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/auth/register">

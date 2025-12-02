@@ -20,10 +20,11 @@ export default function ChatPage() {
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href="/dashboard" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">FS</span>
+              <div className="flex items-center space-x-2">
+              <img src="/logo.svg" 
+              alt="Frago Logo" 
+              className="h-16 w-auto"/>
               </div>
-              <h1 className="text-xl font-bold text-gray-900">FranchiseSwipe</h1>
             </Link>
           </div>
           
